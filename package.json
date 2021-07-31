@@ -1,0 +1,70 @@
+{
+  "name": "react-ts-storybook-webpack5",
+  "version": "1.0.0",
+  "description": "Boiler plate to start a project with react, typescript, storybook and webapack 5",
+  "main": "App.tsx",
+  "scripts": {
+    "test": "jest",
+    "clean": "rm -rf dist/*",
+    "build": "npm run lint && npm run format && webpack --mode=production",
+    "dev": "npm run lint && npm run format && webpack --mode=development",
+    "start": "npm run lint && npm run format && webpack serve",
+    "format": "prettier --write ClientApp/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint --fix ClientApp/**/*.{js,jsx,ts,tsx}",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nithuan141/react-ts-storybook-webpack5.git"
+  },
+  "keywords": [
+    "React",
+    "Typescript"
+  ],
+  "author": "Valorem Reply",
+  "license": "ISC",
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "@commitlint/types": "^12.1.4",
+    "@storybook/addon-actions": "^6.3.5",
+    "@storybook/addon-essentials": "^6.3.5",
+    "@storybook/addon-links": "^6.3.5",
+    "@storybook/builder-webpack5": "^6.3.5",
+    "@storybook/manager-webpack5": "^6.3.5",
+    "@storybook/react": "^6.3.5",
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.9",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "^8.2.2",
+    "commitlint-plugin-function-rules": "^1.3.2",
+    "css-loader": "6.2.0",
+    "eslint": "7.31.0",
+    "eslint-config-airbnb-typescript-prettier": "4.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "husky": "7.0.0",
+    "lint-staged": "11.0.1",
+    "node-sass": "6.0.1",
+    "prettier": "2.3.2",
+    "sass-loader": "12.1.0",
+    "style-loader": "3.2.1",
+    "typescript": "4.3.5",
+    "webpack": "5.45.1",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "3.11.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format",
+      "pre-push": "npm run lint && npm run format",
+      "commit-msg": "commitlint -c -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}
