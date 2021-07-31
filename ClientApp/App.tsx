@@ -4,7 +4,7 @@ import MainPage from './components/pages/MainPage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainPage />
+    <MainPage team="" />
   </React.StrictMode>,
   document.getElementById('root') as HTMLElement,
 );

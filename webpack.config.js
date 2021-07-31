@@ -36,7 +36,7 @@ const config = {
         ]
       }, {
         test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
+        loader: "ts-loader",
         exclude: /(node_modules|bower_components)/
       },
       {
