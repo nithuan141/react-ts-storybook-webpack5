@@ -23,7 +23,7 @@
     "React",
     "Typescript"
   ],
-  "author": "Valorem Reply",
+  "author": "Nithesh Narayanan",
   "license": "ISC",
   "dependencies": {
     "react": "17.0.2",
